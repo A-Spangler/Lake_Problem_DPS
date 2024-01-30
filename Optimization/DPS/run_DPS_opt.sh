@@ -13,7 +13,7 @@
 #SBATCH --mail-user=aas6791@psu.edu             				 						# address for email notification
 #SBATCH --mail-type=ALL                  									    			# email at Begin and End of job
 
-module load openmpi/4.1.4
+module load openmpi/4.1.1-pmi2
 module load boost/1.77.0
 
 # Run LakeDPSparallel inside loop
