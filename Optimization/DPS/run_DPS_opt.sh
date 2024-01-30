@@ -15,10 +15,13 @@
 module load openmpi/4.1.1-pmi2
 module load boost/1.77.0
 
+srun ./LakeDPSparallel 1 100
+
+
 # Run LakeDPSparallel inside loop
-for i in {1..50}
-do
-  srun ./LakeDPSparallel 1 100
-done
+#for i in {1..50}
+#do
+#  srun ./LakeDPSparallel 1 100
+#done
 
 # -N3 -n20 -exclusive
