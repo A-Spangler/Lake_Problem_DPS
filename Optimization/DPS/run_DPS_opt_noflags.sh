@@ -1,3 +1,4 @@
+#!/bin/bash
 #SBATCH -D /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS
 #SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/job.%j.out   
 #SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
