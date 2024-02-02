@@ -2,10 +2,10 @@
 #SBATCH -D /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS
 #SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/job.%j.out   # Name of the output file (eg. myMPI.oJobID)
 #SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=2
 #SBATCH --exclusive
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=10
 #SBATCH --partition=sla-prio           															# Queue name "parallel"
 #SBATCH --account=azh5924_b  														        		# allocation name
 #SBATCH --time=00:05:00       											 				      	# Run time (hh:mm:ss) - up to 36 hours
