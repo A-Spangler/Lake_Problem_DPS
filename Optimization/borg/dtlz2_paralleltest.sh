@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -D /storage/home/aas6791/scratch/Lake_Problem_DPS/borg
-#SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/borg/test.%j.out   # Name of the output file (eg. myMPI.oJobID)
-#SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/borg/error.%j.out
+#SBATCH -D /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/borg
+#SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/borg/test.%j.out   # Name of the output file (eg. myMPI.oJobID)
+#SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/borg/error.%j.out
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=4
 #SBATCH --exclusive
