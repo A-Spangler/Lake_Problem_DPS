@@ -9,16 +9,16 @@
 #SBATCH --mem-per-cpu=10gb       											 					# Memory per cpu. specified if changing from preset
 #SBATCH --partition=sla-prio           													# Queue name "parallel"
 #SBATCH --account=azh5924_b  																    # Allocation name
-#SBATCH --time=02:00:00       											 					  # Run time (hh:mm:ss) - up to 36 hours
+#SBATCH --time=01:00:00       											 					  # Run time (hh:mm:ss) 
 #SBATCH --mail-user=aas6791@psu.edu             								# Address for email notification
 #SBATCH --mail-type=ALL                  												# Email at Begin and End of job
 
 modules to openmpi/4.1.1-pmi2
-module load boost
+module load boost/1.81.1
 
 # Your commands go here
 # arguments are <seed> <NFE>
 for i in {1..50}
 do
-  srun ./LakeDPSparallel $i 200000
+  mpirun -n3 ./LakeDPSparallel $i 200000
 done
