@@ -13,8 +13,8 @@
 #SBATCH --mail-user=aas6791@psu.edu             								# Address for email notification
 #SBATCH --mail-type=ALL                  												# Email at Begin and End of job
 
-modules to openmpi/4.1.1-pmi2
 module load boost/1.81.1
+module load openmpi/4.1.1-pmi2
 
 # Your commands go here
 # arguments are <seed> <NFE>
