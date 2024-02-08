@@ -20,5 +20,5 @@ module load boost/1.81.1
 # arguments are <seed> <NFE>
 for i in {1..50}
 do
-  mpirun -n3 ./LakeDPSparallel $i 200000
+  mpirun --nodes=3 ./LakeDPSparallel $i 200000
 done
