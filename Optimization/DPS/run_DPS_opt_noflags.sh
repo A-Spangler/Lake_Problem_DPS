@@ -20,5 +20,5 @@ module load openmpi/4.1.1-pmi2
 # arguments are <seed> <NFE>
 for i in {1..50}
 do
-  mpirun -n 3 ./LakeDPSparallel $i 200000
+  mpirun --mca btl tcp,self -n 3 ./LakeDPSparallel $i 200000
 done
