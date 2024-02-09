@@ -15,7 +15,7 @@
 module load boost/1.81.1
 module load openmpi/4.1.1-pmi2
 
-mpirun -n 2 ./LakeDPSparallel 1 100
+mpirun --mca btl tcp,self -n 2 ./LakeDPSparallel 1 100
 
 
 # Run LakeDPSparallel inside loop
