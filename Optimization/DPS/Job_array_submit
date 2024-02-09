@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#SBATCH --job-name=py-array        # give the job a name
+#SBATCH --account=open             # specify the account
+#SBATCH --partition=open           # specify the partition
+#SBATCH --nodes=1                  # request a node
+#SBATCH --ntasks=1                 # request a task / cpu
+#SBATCH --mem=1G                   # request the memory required per node
+#SBATCH --time=00:01:00            # set a limit on the total run time
+#SBATCH --output=slurm-%A.%a.out   # stdout file
+#SBATCH --error=slurm-%A.%a.err    # stderr file
+#SBATCH --array=0-4		   # job array with index values 0, 1, 2, 3, 4
+
+echo "My SLURM_ARRAY_JOB_ID is $SLURM_ARRAY_JOB_ID."
+echo "My SLURM_ARRAY_TASK_ID is $SLURM_ARRAY_TASK_ID."
