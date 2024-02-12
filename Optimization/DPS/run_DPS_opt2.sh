@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH -D /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS
-#SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/job.%j.out   
 #SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
 #SBATCH --nodes=2       											 					        # Number of nodes to use
 #SBATCH --exclusive       											 					      # Exclusive use of those nodes
