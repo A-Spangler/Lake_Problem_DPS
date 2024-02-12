@@ -4,7 +4,6 @@
 #SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
 #SBATCH --partition=sla-prio
 ##SBATCH -D .
-##SBATCH --qos=burst2x
 #SBATCH --nodes=1                   # number of nodes
 #SBATCH --ntasks-per-node=1         # number of MP tasks
 ##SBATCH --gres=gpu:2               # number of GPUs per node
