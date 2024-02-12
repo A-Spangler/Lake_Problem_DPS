@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH -D /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal
 #SBATCH -e /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal/output/error.%j.out
+#SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/Intertemporal/output/output.%j.out
 #SBATCH --nodes=3
 #SBATCH --ntasks-per-node=20
 #SBATCH --ntasks=60
