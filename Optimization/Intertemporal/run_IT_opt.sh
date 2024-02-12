@@ -11,14 +11,16 @@
 #SBATCH --time=02:00:00       											 				      	# Run time (hh:mm:ss) - up to 36 hours
 #SBATCH --mail-user=aas6791@psu.edu             				 						# address for email notification   
 
-module load openmpi/4.1.4
-module load boost/1.77.0
+module load boost/1.81.1
+module load openmpi/4.1.1-pmi2
 
 # Your commands go here
+srun LakeITparallel 1 100
+
 # arguments are <seed> <NFE>
-for i in {1..50}
-do
-  srun ./LakeITparallel $i 200000
-done
+#for i in {1..50}
+#do
+#  srun ./LakeITparallel $i 200000
+#done
 
  
