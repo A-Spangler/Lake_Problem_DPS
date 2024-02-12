@@ -6,7 +6,7 @@
 #SBATCH --ntasks-per-node=20
 #SBATCH --ntasks=60
 #SBATCH --exclusive
-#SBATCH --cpus-per-task=10
+##SBATCH --cpus-per-task=10
 #SBATCH --partition=sla-prio           															# Queue name "parallel"
 #SBATCH --account=azh5924_b  														        		# allocation name
 #SBATCH --time=01:00:00       											 				      	# Run time (hh:mm:ss) - up to 36 hours
