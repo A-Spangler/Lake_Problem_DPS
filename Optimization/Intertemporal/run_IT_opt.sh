@@ -2,9 +2,9 @@
 #SBATCH -D /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal
 #SBATCH -e /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal/output/error.%j.out
 #SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/Intertemporal/output/output.%j.out
-#SBATCH --nodes=3
+#SBATCH --nodes=2
 #SBATCH --ntasks-per-node=20
-#SBATCH --ntasks=60
+#SBATCH --ntasks40
 #SBATCH --exclusive
 #SBATCH --mem-per-cpu=10gb
 #SBATCH --partition=sla-prio           															# Queue name "parallel"
@@ -16,12 +16,10 @@ module load boost/1.81.1
 module load openmpi/4.1.1-pmi2
 
 # Your commands go here
-srun LakeITparallel 1 100
-
 # arguments are <seed> <NFE>
-#for i in {1..50}
-#do
-#  srun ./LakeITparallel $i 200000
-#done
+for i in {1..50}
+do
+  srun ./LakeITparallel $i 200000
+done
 
  
