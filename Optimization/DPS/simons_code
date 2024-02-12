@@ -4,13 +4,12 @@
 #SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
 #SBATCH --partition=sla-prio
 ##SBATCH --qos=burst2x
-#SBATCH --output=O-%x.%j
-#SBATCH --error=E-%x.%j
 #SBATCH --nodes=2                   # number of nodes
 #SBATCH --ntasks-per-node=1         # number of MP tasks
-##SBATCH --gres=gpu:2                # number of GPUs per node
-#SBATCH --cpus-per-task=16         # number of cores per tasks
-#SBATCH --time=01:59:00             # maximum execution time (HH:MM:SS)
+##SBATCH --gres=gpu:2               # number of GPUs per node
+#SBATCH --cpus-per-task=16          # number of cores per tasks
+#SBATCH --account=azh5924_b  				# allocation name
+#SBATCH --time=00:05:00   
 
 module load boost/1.81.1
 module load openmpi/4.1.1-pmi2
