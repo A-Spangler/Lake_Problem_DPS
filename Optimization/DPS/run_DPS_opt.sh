@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -D /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS
-#SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
+##SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
 #SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/output.%j.out
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=2
