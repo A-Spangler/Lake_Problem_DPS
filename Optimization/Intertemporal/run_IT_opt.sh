@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH -D /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal
-#SBATCH -o /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal/output/job.%j.out   # Name of the output file (eg. myMPI.oJobID)
 #SBATCH -e /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal/output/error.%j.out
 #SBATCH --nodes=3
 #SBATCH --ntasks-per-node=20
