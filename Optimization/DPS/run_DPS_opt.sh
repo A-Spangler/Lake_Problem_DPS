@@ -3,7 +3,7 @@
 ##SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
 #SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/output.%j.out
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=2
+#SBATCH --ntasks-per-node=20
 #SBATCH --exclusive
 #SBATCH --cpus-per-task=10
 #SBATCH --partition=sla-prio           															# Queue name "parallel"
