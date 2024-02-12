@@ -2,11 +2,11 @@
 #SBATCH -D /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal
 #SBATCH -e /scratch/aas6791/Lake_Problem_DPS/Optimization/Intertemporal/output/error.%j.out
 #SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/Intertemporal/output/output.%j.out
-#SBATCH --nodes=2
+#SBATCH --nodes=3
 #SBATCH --ntasks-per-node=20
-#SBATCH --ntasks40
+#SBATCH --ntasks=60
 #SBATCH --exclusive
-#SBATCH --mem-per-cpu=10gb
+##SBATCH --mem-per-cpu=10gb
 #SBATCH --partition=sla-prio           															# Queue name "parallel"
 #SBATCH --account=azh5924_b  														        		# allocation name
 #SBATCH --time=02:00:00       											 				      	# Run time (hh:mm:ss) - up to 36 hours
