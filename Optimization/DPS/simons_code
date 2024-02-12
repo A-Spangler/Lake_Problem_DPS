@@ -3,6 +3,7 @@
 #SBATCH -o /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/job.%j.out   # Name of the output file (eg. myMPI.oJobID)
 #SBATCH -e /storage/home/aas6791/scratch/Lake_Problem_DPS/Optimization/DPS/output/error.%j.out
 #SBATCH --partition=sla-prio
+##SBATCH -D .
 ##SBATCH --qos=burst2x
 #SBATCH --nodes=2                   # number of nodes
 #SBATCH --ntasks-per-node=1         # number of MP tasks
