@@ -2,7 +2,6 @@
   
 #SBATCH --job-name=multinode
 ##SBATCH -D .
-#SBATCH -A icds_internal_use  
 #SBATCH --partition=sla-prio
 ##SBATCH --qos=burst2x
 #SBATCH --output=O-%x.%j
