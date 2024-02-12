@@ -5,7 +5,7 @@
 #SBATCH --partition=sla-prio
 ##SBATCH -D .
 ##SBATCH --qos=burst2x
-#SBATCH --nodes=2                   # number of nodes
+#SBATCH --nodes=1                   # number of nodes
 #SBATCH --ntasks-per-node=1         # number of MP tasks
 ##SBATCH --gres=gpu:2               # number of GPUs per node
 #SBATCH --cpus-per-task=16          # number of cores per tasks
