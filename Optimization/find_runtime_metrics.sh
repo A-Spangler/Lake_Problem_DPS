@@ -1,6 +1,6 @@
 NSEEDS=50
 SEEDS=$(seq 1 ${NSEEDS})
-JAVA_ARGS="-cp MOEAFramework-2.4-Demo.jar"
+JAVA_ARGS="-cp MOEAFramework-3.9-Demo.jar"
 
 for SEED in ${SEEDS}
 do
