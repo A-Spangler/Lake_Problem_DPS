@@ -19,5 +19,5 @@ module load openmpi/4.1.1-pmi2
 # Run LakeDPSparallel inside loop
 for i in {1..50}
 do
-  srun ./LakeDPSparallel 1 100
+  srun ./LakeDPSparallel $i 200000
 done
