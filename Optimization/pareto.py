@@ -556,7 +556,7 @@ def rowsof(annotatedlines, delimiter):
     for line, annot in annotatedlines:
         if not line.strip():  # Skip empty lines
             continue
-        yield (line.split(delimiter), annot)
+            yield (line.split(delimiter), annot)
 
 def withobjectives(annotatedrows, oindices):
     """ extract objectives and convert to float """
