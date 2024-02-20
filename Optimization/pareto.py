@@ -554,6 +554,8 @@ def filter_lines(annotatedlines, **kwargs):
 def rowsof(annotatedlines, delimiter):
     """ split lines using delimiter, yielding annotated rows """
     for line, annot in annotatedlines:
+                if not line.strip():  # Skip empty lines
+            continue
         yield (line.split(delimiter), annot)
 
 def withobjectives(annotatedrows, oindices):
