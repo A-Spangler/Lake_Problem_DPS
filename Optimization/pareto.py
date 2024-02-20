@@ -474,13 +474,14 @@ def eps_sort(tables, objectives=None, epsilons=None, **kwargs):
     return tagalongs
 
 def eps_sort_solutions(tables, epsilons=None):
-    """
-    Perform an epsilon-nondominated sort
-    tables: input (objectives, row) tuples
-    epsilons: epsilon values for the objectives.  Assume 1e-9 if none
-    """
     # slip the first row off the first table to figure out nobj
-    objectives, row = next(tables[0])
+    iterator = iter(tables[0])
+    try:
+        objectives, row = next(iterator)
+    except StopIteration:
+        # Handle the case where the iterator is empty
+        return []
+
     table = [(objectives, row)]
     tables = [table] + tables
 
@@ -494,8 +495,12 @@ def eps_sort_solutions(tables, epsilons=None):
     archive = Archive(epsilons)
 
     for table in tables:
-        for objectives, row in table:
-            archive.sortinto(objectives, row)
+        iterator = iter(table)
+        try:
+            for objectives, row in iterator:
+                archive.sortinto(objectives, row)
+        except StopIteration:
+            continue  # Handle the case where the iterator is empty
 
     return archive.tagalongs
 
